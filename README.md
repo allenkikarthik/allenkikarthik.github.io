@@ -1,16 +1,27 @@
-## Hi there 👋
+# Karthik Kumar Allenki
 
-<!--
-**allenkikarthik/allenkikarthik** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+This repository contains the personal website published at
+[allenkikarthik.github.io](https://allenkikarthik.github.io/). Recruiters and
+hiring teams can get in touch through the LinkedIn link on the site.
 
-Here are some ideas to get you started:
+The site is a static, responsive page. A GitHub Actions workflow deploys the
+repository to GitHub Pages on every push to `main`, including changes to
+`index.html` and other site files.
 
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+## Enable deployment
+
+In the repository's **Settings → Pages**, set the build and deployment source
+to **GitHub Actions**. After that one-time setup, push changes to `main` and
+the workflow will publish the site. You can also run the workflow manually
+from the repository's **Actions** tab.
+
+## Local preview
+
+Open `index.html` in a browser, or start a local static server from the
+repository root:
+
+```sh
+python -m http.server 8000
+```
+
+Then visit [http://localhost:8000](http://localhost:8000).

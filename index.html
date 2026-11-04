@@ -1,0 +1,405 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#f5f3ed">
+    <meta
+      name="description"
+      content="The personal website of Karthik Kumar Allenki. Recruiters and hiring teams are welcome to reach out on LinkedIn."
+    >
+    <meta property="og:title" content="Karthik Kumar Allenki">
+    <meta
+      property="og:description"
+      content="A personal space on the web. Recruiters and hiring teams are welcome to connect on LinkedIn."
+    >
+    <meta property="og:type" content="website">
+    <title>Karthik Kumar Allenki</title>
+    <style>
+      :root {
+        color-scheme: light;
+        --paper: #f5f3ed;
+        --ink: #20231f;
+        --muted: #656a62;
+        --green: #244b3e;
+        --line: #d9d8cf;
+        --serif: Georgia, "Times New Roman", serif;
+        --sans: "Segoe UI", Arial, sans-serif;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
+      body {
+        margin: 0;
+        background: var(--paper);
+        color: var(--ink);
+        font-family: var(--sans);
+        -webkit-font-smoothing: antialiased;
+      }
+
+      a {
+        color: inherit;
+      }
+
+      a:focus-visible {
+        outline: 3px solid #bd704c;
+        outline-offset: 5px;
+      }
+
+      .page-shell {
+        width: min(1120px, calc(100% - 64px));
+        margin: 0 auto;
+      }
+
+      .site-header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        min-height: 92px;
+        border-bottom: 1px solid var(--line);
+      }
+
+      .wordmark {
+        display: inline-flex;
+        align-items: center;
+        gap: 12px;
+        text-decoration: none;
+      }
+
+      .wordmark-mark {
+        display: grid;
+        width: 38px;
+        height: 38px;
+        place-items: center;
+        border: 1px solid var(--ink);
+        border-radius: 50%;
+        font-family: var(--serif);
+        font-size: 15px;
+        letter-spacing: -2px;
+      }
+
+      .wordmark-name {
+        font-size: 13px;
+        font-weight: 650;
+        letter-spacing: 0.015em;
+      }
+
+      .site-nav {
+        display: flex;
+        align-items: center;
+        gap: 32px;
+        font-size: 13px;
+      }
+
+      .site-nav a {
+        text-decoration: none;
+      }
+
+      .site-nav a:hover,
+      .text-link:hover {
+        color: var(--green);
+      }
+
+      .hero {
+        display: grid;
+        grid-template-columns: 1.15fr 0.85fr;
+        align-items: center;
+        gap: 64px;
+        min-height: 600px;
+        padding: 82px 0;
+      }
+
+      .eyebrow {
+        margin: 0 0 24px;
+        color: var(--green);
+        font-size: 11px;
+        font-weight: 700;
+        letter-spacing: 0.16em;
+        text-transform: uppercase;
+      }
+
+      h1 {
+        max-width: 650px;
+        margin: 0;
+        font-family: var(--serif);
+        font-size: clamp(54px, 7.3vw, 92px);
+        font-weight: 400;
+        letter-spacing: -0.065em;
+        line-height: 0.99;
+      }
+
+      h1 span {
+        color: var(--green);
+      }
+
+      .hero-copy {
+        max-width: 440px;
+        margin: 28px 0 0;
+        color: var(--muted);
+        font-size: 16px;
+        line-height: 1.8;
+      }
+
+      .primary-link {
+        display: inline-flex;
+        align-items: center;
+        gap: 18px;
+        margin-top: 34px;
+        padding: 15px 19px;
+        background: var(--green);
+        color: #fff;
+        font-size: 13px;
+        font-weight: 600;
+        text-decoration: none;
+        transition: background 160ms ease, transform 160ms ease;
+      }
+
+      .primary-link:hover {
+        transform: translateY(-2px);
+        background: #19392f;
+      }
+
+      .primary-link span {
+        font-size: 17px;
+        line-height: 0.8;
+      }
+
+      .portrait-card {
+        position: relative;
+        display: grid;
+        min-height: 390px;
+        overflow: hidden;
+        place-items: center;
+        background: var(--green);
+        color: #f5f3ed;
+      }
+
+      .portrait-card::before,
+      .portrait-card::after {
+        position: absolute;
+        width: 290px;
+        height: 290px;
+        border: 1px solid rgb(245 243 237 / 17%);
+        border-radius: 50%;
+        content: "";
+      }
+
+      .portrait-card::before {
+        transform: translate(-18%, -18%);
+      }
+
+      .portrait-card::after {
+        transform: translate(18%, 18%);
+      }
+
+      .monogram {
+        position: relative;
+        z-index: 1;
+        font-family: var(--serif);
+        font-size: clamp(120px, 19vw, 220px);
+        letter-spacing: -0.13em;
+        line-height: 1;
+        transform: translateX(-0.06em);
+      }
+
+      .card-caption {
+        position: absolute;
+        right: 24px;
+        bottom: 23px;
+        left: 24px;
+        display: flex;
+        justify-content: space-between;
+        color: rgb(245 243 237 / 75%);
+        font-size: 10px;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+      }
+
+      .about {
+        display: grid;
+        grid-template-columns: 0.7fr 1.3fr;
+        gap: 64px;
+        padding: 32px 0 78px;
+        border-top: 1px solid var(--line);
+      }
+
+      .about h2 {
+        margin: 0;
+        font-family: var(--serif);
+        font-size: 25px;
+        font-weight: 400;
+      }
+
+      .about-copy {
+        max-width: 600px;
+        margin: 0;
+        color: var(--muted);
+        font-size: 15px;
+        line-height: 1.85;
+      }
+
+      .text-link {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        margin-top: 18px;
+        color: var(--ink);
+        font-size: 13px;
+        font-weight: 650;
+        text-decoration-thickness: 1px;
+        text-underline-offset: 4px;
+      }
+
+      .site-footer {
+        display: flex;
+        justify-content: space-between;
+        padding: 22px 0 28px;
+        border-top: 1px solid var(--line);
+        color: var(--muted);
+        font-size: 11px;
+      }
+
+      .site-footer a {
+        text-decoration: none;
+      }
+
+      @media (max-width: 760px) {
+        .page-shell {
+          width: min(100% - 40px, 560px);
+        }
+
+        .site-header {
+          min-height: 76px;
+        }
+
+        .site-nav {
+          gap: 18px;
+        }
+
+        .hero {
+          grid-template-columns: 1fr;
+          gap: 42px;
+          min-height: auto;
+          padding: 72px 0 64px;
+        }
+
+        .hero-copy {
+          font-size: 15px;
+        }
+
+        .portrait-card {
+          min-height: 310px;
+        }
+
+        .about {
+          grid-template-columns: 1fr;
+          gap: 20px;
+          padding: 28px 0 58px;
+        }
+      }
+
+      @media (max-width: 420px) {
+        .page-shell {
+          width: calc(100% - 32px);
+        }
+
+        .wordmark-name {
+          max-width: 130px;
+          font-size: 12px;
+        }
+
+        .site-nav {
+          gap: 12px;
+          font-size: 12px;
+        }
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        html {
+          scroll-behavior: auto;
+        }
+
+        *,
+        *::before,
+        *::after {
+          transition-duration: 0.01ms !important;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="page-shell">
+      <header class="site-header">
+        <a class="wordmark" href="#top" aria-label="Karthik Kumar Allenki, home">
+          <span class="wordmark-mark" aria-hidden="true">ka</span>
+          <span class="wordmark-name">Karthik Kumar Allenki</span>
+        </a>
+        <nav class="site-nav" aria-label="Main navigation">
+          <a href="#about">About</a>
+          <a href="#connect">For recruiters <span aria-hidden="true">↗</span></a>
+        </nav>
+      </header>
+
+      <main id="top">
+        <section class="hero" aria-labelledby="intro-title">
+          <div>
+            <p class="eyebrow">A personal space on the web</p>
+            <h1 id="intro-title">Karthik Kumar <span>Allenki.</span></h1>
+            <p class="hero-copy">
+              Welcome. Recruiters and hiring teams are invited to reach out
+              about opportunities, my experience, or a potential fit.
+            </p>
+            <a
+              class="primary-link"
+              href="https://www.linkedin.com/in/karthik-kumar-allenki-a2b80953/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Contact me on LinkedIn <span aria-hidden="true">↗</span>
+            </a>
+          </div>
+          <div class="portrait-card" aria-label="KA monogram artwork">
+            <span class="monogram" aria-hidden="true">ka</span>
+            <div class="card-caption" aria-hidden="true">
+              <span>Karthik Kumar Allenki</span>
+              <span>Personal website</span>
+            </div>
+          </div>
+        </section>
+
+        <section class="about" id="about" aria-labelledby="about-title">
+          <h2 id="about-title">For recruiters and hiring teams</h2>
+          <div id="connect">
+            <p class="about-copy">
+              Interested in discussing an opportunity, my experience, or a
+              potential fit? Send me a message on LinkedIn. I’d be glad to connect.
+            </p>
+            <a
+              class="text-link"
+              href="https://www.linkedin.com/in/karthik-kumar-allenki-a2b80953/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Get in touch on LinkedIn <span aria-hidden="true">↗</span>
+            </a>
+          </div>
+        </section>
+      </main>
+
+      <footer class="site-footer">
+        <span>Karthik Kumar Allenki</span>
+        <a
+          href="https://www.linkedin.com/in/karthik-kumar-allenki-a2b80953/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >LinkedIn ↗</a>
+      </footer>
+    </div>
+  </body>
+</html>
