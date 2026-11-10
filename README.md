@@ -1,7 +1,7 @@
 # Karthik Kumar Allenki
 
 This repository contains the personal website published at
-[allenkikarthik.github.io](https://allenkikarthik.github.io/). Recruiters and
+[allenki_karthik.github.io](https://allenkikarthik.github.io/). Recruiters and
 hiring teams can get in touch through the LinkedIn link on the site.
 
 The site is a static, responsive page. A GitHub Actions workflow deploys the
